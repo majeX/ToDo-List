@@ -4,15 +4,15 @@
   /* @ngInject */
   var Routes = function($routeProvider){
     $routeProvider
-      .when('/home', {
-        templateUrl: 'home/home.html',
-        controller: 'HomeController as home'
+      .when('/todo', {
+        templateUrl: 'todo/todo.html',
+        controller: 'TodoController as todo'
       })
       .otherwise({
-        redirectTo: '/home'
+        redirectTo: '/todo'
       });
   };
 
-  angular.module('asApp', ['as.home'])
+  angular.module('todoApp', ['as.todo'])
     .config(Routes);
 })();

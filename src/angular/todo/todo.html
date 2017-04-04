@@ -1,0 +1,31 @@
+<div class="flex-xs_100 flex-md_70 flex-lg_50 flex_40 todo container layout-column layout-align-center-start" ng-class="{'block-transition': blockTransition}">
+    <form class="relative todo__form layout-row layout-align-center-center" ng-submit="onTaskAddClick()">
+      <input placeholder="Task description..." class="absolute p16 todo__list_task-input" ng-model="title">
+      <button class="absolute btn btn-add">+</button>
+    </form>
+    <p class="ml12 todo__title">TASKS: {{tasks.length}}</p>
+    <div class="w_100" ng-show="tasks.length > 0">
+      <ul class="w_100 todo__list todo__list_active">
+        <li class="ta-c w_100 relative todo__list_task" ng-repeat="task in tasks track by $index" ng-if="!task.complete" ng-class="{'todo__list_task-hide': task.hide}">
+          <input placeholder="Task description..." class="p16 todo__list_task-input" value="" ng-model="task.title"/>
+          <button title="Mark as done" class="absolute btn btn-done" ng-click="onTaskDoneClick(task,true)">
+            <img class="btn-done__img" src="assets/img/done.png" />
+          </button>
+          <button class="absolute btn btn-delete" ng-click="onTaskDeleteClick(task)">+</button>
+        </li>
+      </ul> 
+      <p class="ml12 todo__title">DONE: {{doneTasks || 0}}</p>
+      <ul class="w_100 todo__list todo__list_done">
+        <li class="ta-c w_100 relative todo__list_task" ng-repeat="task in tasks track by $index" ng-if="task.complete" ng-class="{'todo__list_task-hide': task.hide}">
+          <input placeholder="Task description..." class="p16 todo__list_task-input" value="" ng-model="task.title"/>
+          <button title="Mark as undone" class="absolute btn btn-done" ng-click="onTaskDoneClick(task,false)">
+            <img class="btn-done__img" src="assets/img/done.png" />
+          </button>
+          <button class="absolute btn btn-delete" ng-click="onTaskDeleteClick(task)">+</button>
+        </li>
+      </ul>
+    </div>
+    <div ng-show="tasks.length === 0" class="layout-row w_100">
+      <p class="todo__no-tasks flex_100">No tasks yet...</p>
+    </div>
+</div>
