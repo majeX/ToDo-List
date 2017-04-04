@@ -1,33 +1,12 @@
-# Starter Application for creating awesome AngularJS apps 
+# Simple ToDo List App
 ---
-#### Kickstart AngularJS App with modular code, gulp, sass, karma and other support out of the box. [Try](http://sirajc.github.io/angularjs-starter)
-
-### Tools and Technologies
-1. HTML
-1. CSS
-1. JavaScript
-1. __AngularJS__
-1. SASS
-1. nodejs (npm)
-1. bower
-1. Gulp
-1. Git
-1. REST / AJAX
-1. Markdown
-1. Jasmine
-1. Karma
-1. Protractor
-1. Bootstrap
-
+#### used Kickstart AngularJS: [Try](http://sirajc.github.io/angularjs-starter)
 
 #### Setting up and using this project
 
 1. Install nodejs, npm; Globally install bower and gulp
 2. From console run `npm install` and then `bower install`
 3. Run `gulp` on console to trigger a clean build. goto `http://localhost:8000` to view the app. This command also starts a watcher which builds and does the livereload whenver you change any file
-4. For unit tests run `gulp karma`. Tests are run continuously as and when the code is changed
-5. For e2e tests run `gulp e2e`. This will run your e2e on chrome. Make sure you run `gulp webdriver_update` once, before running e2e test cases
-6. Development and production builds will be created in `builds/development` and `builds/production` folder respectively (based on NODE_ENV variable set in environment)
 
 ## Copyright and license
 
